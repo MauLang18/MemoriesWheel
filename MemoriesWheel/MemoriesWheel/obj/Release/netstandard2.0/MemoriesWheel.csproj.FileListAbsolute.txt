@@ -1,0 +1,17 @@
+C:\Users\maula\OneDrive\Escritorio\App\MemoriesWheel\MemoriesWheel\bin\Release\netstandard2.0\MemoriesWheel.deps.json
+C:\Users\maula\OneDrive\Escritorio\App\MemoriesWheel\MemoriesWheel\bin\Release\netstandard2.0\MemoriesWheel.dll
+C:\Users\maula\OneDrive\Escritorio\App\MemoriesWheel\MemoriesWheel\bin\Release\netstandard2.0\ref\MemoriesWheel.dll
+C:\Users\maula\OneDrive\Escritorio\App\MemoriesWheel\MemoriesWheel\bin\Release\netstandard2.0\MemoriesWheel.pdb
+C:\Users\maula\OneDrive\Escritorio\App\MemoriesWheel\MemoriesWheel\obj\Release\netstandard2.0\MemoriesWheel.csproj.AssemblyReference.cache
+C:\Users\maula\OneDrive\Escritorio\App\MemoriesWheel\MemoriesWheel\obj\Release\netstandard2.0\MemoriesWheel.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\maula\OneDrive\Escritorio\App\MemoriesWheel\MemoriesWheel\obj\Release\netstandard2.0\App.xaml.g.cs
+C:\Users\maula\OneDrive\Escritorio\App\MemoriesWheel\MemoriesWheel\obj\Release\netstandard2.0\View\AgregarPage.xaml.g.cs
+C:\Users\maula\OneDrive\Escritorio\App\MemoriesWheel\MemoriesWheel\obj\Release\netstandard2.0\View\DetallePage.xaml.g.cs
+C:\Users\maula\OneDrive\Escritorio\App\MemoriesWheel\MemoriesWheel\obj\Release\netstandard2.0\View\HomePage.xaml.g.cs
+C:\Users\maula\OneDrive\Escritorio\App\MemoriesWheel\MemoriesWheel\obj\Release\netstandard2.0\MemoriesWheel.AssemblyInfoInputs.cache
+C:\Users\maula\OneDrive\Escritorio\App\MemoriesWheel\MemoriesWheel\obj\Release\netstandard2.0\MemoriesWheel.AssemblyInfo.cs
+C:\Users\maula\OneDrive\Escritorio\App\MemoriesWheel\MemoriesWheel\obj\Release\netstandard2.0\MemoriesWheel.csproj.CoreCompileInputs.cache
+C:\Users\maula\OneDrive\Escritorio\App\MemoriesWheel\MemoriesWheel\obj\Release\netstandard2.0\XamlC.stamp
+C:\Users\maula\OneDrive\Escritorio\App\MemoriesWheel\MemoriesWheel\obj\Release\netstandard2.0\MemoriesWheel.dll
+C:\Users\maula\OneDrive\Escritorio\App\MemoriesWheel\MemoriesWheel\obj\Release\netstandard2.0\refint\MemoriesWheel.dll
+C:\Users\maula\OneDrive\Escritorio\App\MemoriesWheel\MemoriesWheel\obj\Release\netstandard2.0\MemoriesWheel.pdb

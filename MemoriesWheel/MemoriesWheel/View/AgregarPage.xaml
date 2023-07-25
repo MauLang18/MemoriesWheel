@@ -1,0 +1,125 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="MemoriesWheel.View.AgregarPage"
+             NavigationPage.HasNavigationBar="False">
+    <Grid RowDefinitions="80,*"
+          BackgroundColor="#4d91c6">
+        <StackLayout Orientation="Horizontal"
+                     Margin="10">
+            <Image Source="flechavolver.png"
+                   Margin="10,10,0,0">
+                <Image.GestureRecognizers>
+                    <TapGestureRecognizer Command="{Binding VolverCommand}" />
+                </Image.GestureRecognizers>
+            </Image>
+        </StackLayout>
+        <StackLayout Grid.Row="1"
+                     Margin="10,0,10,10">
+            <StackLayout Orientation="Horizontal">
+                <Label Text="ID:"
+                       TextColor="White"
+                       FontAttributes="Bold"
+                       VerticalOptions="Center" />
+                <Entry Placeholder="Ingrese el Id"
+                       FontAttributes="Bold"
+                       TextColor="White"
+                       PlaceholderColor="White"
+                       TextTransform="Lowercase"
+                       FontSize="20"
+                       HorizontalOptions="FillAndExpand"
+                       Text="{Binding Id}" />
+            </StackLayout>
+            <StackLayout Orientation="Horizontal">
+                <Label Text="TITULO:"
+                       TextColor="White"
+                       FontAttributes="Bold"
+                       VerticalOptions="Center" />
+                <Entry Placeholder="Ingrese el titulo"
+                       FontAttributes="Bold"
+                       TextColor="White"
+                       PlaceholderColor="White"
+                       TextTransform="Default"
+                       FontSize="20"
+                       HorizontalOptions="FillAndExpand"
+                       Text="{Binding Titulo}" />
+            </StackLayout>
+            <StackLayout Orientation="Horizontal">
+                <Label Text="FECHA:"
+                       TextColor="White"
+                       FontAttributes="Bold"
+                       VerticalOptions="Center" />
+                <DatePicker TextColor="White"
+                            Date="{Binding Fecha, Mode=TwoWay}"
+                            HorizontalOptions="FillAndExpand">
+                    <DatePicker.Format>dd/MM/yyyy</DatePicker.Format>
+                </DatePicker>
+            </StackLayout>
+            <StackLayout Orientation="Horizontal">
+                <Label Text="LUGAR:"
+                       TextColor="White"
+                       FontAttributes="Bold"
+                       VerticalOptions="Center" />
+                <Entry Placeholder="Ingrese el lugar"
+                       FontAttributes="Bold"
+                       TextColor="White"
+                       PlaceholderColor="White"
+                       TextTransform="Default"
+                       FontSize="20"
+                       HorizontalOptions="FillAndExpand"
+                       Text="{Binding Lugar}" />
+            </StackLayout>
+            <StackLayout Orientation="Horizontal">
+                <Label Text="FOTO:"
+                       TextColor="White"
+                       FontAttributes="Bold"
+                       VerticalOptions="Center" />
+                <Image x:Name="imgFoto"
+                       HeightRequest="200"
+                       WidthRequest="200"
+                       BackgroundColor="AliceBlue">
+                    <Image.GestureRecognizers>
+                        <TapGestureRecognizer x:Name="ImageTap"
+                                              Tapped="ImageTap_Tapped" />
+                    </Image.GestureRecognizers>
+                </Image>
+                <Button Text="Subir"
+                        x:Name="btnSubir"
+                        Clicked="btnSubir_Clicked" />
+            </StackLayout>
+            <StackLayout Orientation="Horizontal">
+                <Label Text="TEXTO:"
+                       TextColor="White"
+                       FontAttributes="Bold"
+                       VerticalOptions="Center" />
+                <Editor Placeholder="Ingrese un texto..."
+                        FontAttributes="Bold"
+                        PlaceholderColor="White"
+                        TextTransform="Default"
+                        HeightRequest="130"
+                        FontSize="20"
+                        TextColor="White"
+                        HorizontalOptions="FillAndExpand"
+                        Text="{Binding Texto}" />
+            </StackLayout>
+            <Frame HorizontalOptions="Center"
+                   Padding="6"
+                   Margin="0,30,0,0"
+                   CornerRadius="15"
+                   HasShadow="False"
+                   BackgroundColor="#23a3c7">
+                <Button Text="+"
+                        HorizontalOptions="Center"
+                        BackgroundColor="#23a3c7"
+                        BorderColor="#6f90f4"
+                        BorderWidth="6"
+                        CornerRadius="15"
+                        FontAttributes="Bold"
+                        FontSize="25"
+                        WidthRequest="60"
+                        HeightRequest="60"
+                        Command="{Binding InsertarCommand}" />
+            </Frame>
+        </StackLayout>
+    </Grid>
+</ContentPage>

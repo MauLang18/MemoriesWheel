@@ -1,0 +1,127 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="MemoriesWheel.View.HomePage"
+             NavigationPage.HasNavigationBar="False"
+             xmlns:sh="clr-namespace:Sharpnado.Shades;assembly=Sharpnado.Shadows">
+    <Grid RowDefinitions="90,*"
+          BackgroundColor="#4d91c6">
+        <Label Text="MemoriesWheel"
+               TextColor="Black"
+               FontSize="20"
+               FontAttributes="Bold"
+               Margin="10"/>
+        <StackLayout Orientation="Horizontal"
+                     VerticalOptions="CenterAndExpand"
+                     Grid.Row="0">
+            <Entry Placeholder="Search..."
+                   x:Name="txtBuscar"
+                   Text="{Binding Buscar}"
+                   TextTransform="Lowercase"
+                   FontSize="20"
+                   HorizontalOptions="FillAndExpand" 
+                   Margin="10,25,0,0"/>
+            <ImageButton Source="search.png"
+                         x:Name="btnBuscar"
+                         Command="{Binding BuscarCommand}"
+                         WidthRequest="24"
+                         HeightRequest="24" 
+                         BackgroundColor="Transparent"
+                         Margin="0,25,25,0"/>
+        </StackLayout>
+        <CollectionView BackgroundColor="#4d91c6"
+                        Grid.Row="1"
+                        ItemsSource="{Binding Recuerdos}"
+                        Margin="0,0,0,0"
+                        x:Name="lista">
+            <CollectionView.ItemsLayout>
+                <GridItemsLayout Orientation="Horizontal"
+                                 Span="2"
+                                 HorizontalItemSpacing="1" />
+            </CollectionView.ItemsLayout>
+            <CollectionView.ItemTemplate>
+                <DataTemplate>
+                    <StackLayout>
+                        <Frame HeightRequest="280"
+                               WidthRequest="180"
+                               BackgroundColor="White"
+                               Padding="0"
+                               HasShadow="True"
+                               Margin="10"
+                               CornerRadius="10"
+                               HorizontalOptions="CenterAndExpand">
+                            <Grid>
+                                <StackLayout BackgroundColor="Black">
+                                    <Image Source="{Binding Imagen}"
+                                           HeightRequest="350"
+                                           Opacity="0.8"
+                                           Aspect="AspectFill" />
+                                </StackLayout>
+                                <StackLayout Margin="0,0,0,10">
+                                    <StackLayout Orientation="Horizontal">
+                                        <Label Text="{Binding Titulo}"
+                                               TextColor="White"
+                                               FontSize="18"
+                                               FontAttributes="None"
+                                               Margin="15,15"
+                                               HorizontalOptions="StartAndExpand" />
+                                        <Image Source="https://cdn1.iconfinder.com/data/icons/sports-awards/32/ribbon-2-512.png"
+                                               HeightRequest="50"
+                                               Aspect="AspectFit"
+                                               HorizontalOptions="EndAndExpand"
+                                               Margin="10,0" />
+                                    </StackLayout>
+                                    <Label Text="{Binding Fecha}"
+                                           TextColor="White"
+                                           FontSize="18"
+                                           FontAttributes="None"
+                                           Margin="15,0"
+                                           VerticalOptions="EndAndExpand" />
+                                    <StackLayout Orientation="Horizontal"
+                                                 Margin="15,-8,0,0">
+                                        <Image Source="https://freepngimg.com/download/symbol/62766-map-symbol-computer-location-icons-free-download-png-hd.png"
+                                               HeightRequest="20"
+                                               Margin="-5,0"
+                                               Aspect="AspectFit" />
+                                        <Label Text="{Binding Lugar}"
+                                               TextColor="White"
+                                               FontSize="16"
+                                               FontAttributes="None"
+                                               VerticalOptions="EndAndExpand" />
+                                    </StackLayout>
+                                </StackLayout>
+                            </Grid>
+                            <Frame.GestureRecognizers>
+                                <TapGestureRecognizer Command="{Binding Path=BindingContext.DetalleCommand,Source={x:Reference lista}}"
+                                                      CommandParameter="{Binding .}" />
+                            </Frame.GestureRecognizers>
+                        </Frame>
+                        <StackLayout.GestureRecognizers>
+                            <TapGestureRecognizer Command="{Binding Path=BindingContext.DetalleCommand,Source={x:Reference lista}}"
+                                                  CommandParameter="{Binding .}" />
+                        </StackLayout.GestureRecognizers>
+                    </StackLayout>
+                </DataTemplate>
+            </CollectionView.ItemTemplate>
+        </CollectionView>
+        <sh:Shadows CornerRadius="50"
+                    Shades="{sh:SingleShade 
+                Offset='0,10',
+                Opacity=0.5,
+                Color=#23a3c7}"
+                    Grid.Row="1">
+            <Button Text="+"
+                    Grid.Row="1"
+                    HeightRequest="70"
+                    WidthRequest="70"
+                    VerticalOptions="End"
+                    HorizontalOptions="End"
+                    CornerRadius="35"
+                    Margin="15"
+                    FontSize="40"
+                    FontAttributes="Bold"
+                    BackgroundColor="#6f90f4"
+                    Command="{Binding AgregarCommand}" />
+        </sh:Shadows>
+    </Grid>
+</ContentPage>

@@ -1,0 +1,114 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="MemoriesWheel.View.DetallePage"
+             NavigationPage.HasNavigationBar="False">
+    <ContentPage.Content>
+        <Grid>
+            <StackLayout VerticalOptions="FillAndExpand">
+                <Grid>
+                    <Frame Padding="0"
+                           HeightRequest="400"
+                           BackgroundColor="Black">
+                        <Image Opacity="0.7"
+                               Source="{Binding parametrosRecibe.Imagen}"
+                               Aspect="AspectFill" />
+                    </Frame>
+                    <StackLayout HorizontalOptions="StartAndExpand">
+                        <Image Source="flechavolver.png"
+                               Margin="10">
+                            <Image.GestureRecognizers>
+                                <TapGestureRecognizer Command="{Binding VolverCommand}" />
+                            </Image.GestureRecognizers>
+                        </Image>
+                    </StackLayout>
+                    <StackLayout VerticalOptions="EndAndExpand"
+                                 Margin="15,15,15,85">
+                        <Grid>
+                            <Grid.ColumnDefinitions>
+                                <ColumnDefinition Width="3*" />
+                                <ColumnDefinition Width="*" />
+                            </Grid.ColumnDefinitions>
+                            <Label Text="{Binding parametrosRecibe.Titulo}"
+                                   Grid.Column="0"
+                                   TextColor="White"
+                                   FontSize="28"
+                                   FontAttributes="None" />
+                        </Grid>
+                    </StackLayout>
+                </Grid>
+                <Grid  VerticalOptions="FillAndExpand"
+                       Margin="0,-30,0,0"
+                       Padding="0"
+                       BackgroundColor="#4d91c6">
+                    <Frame CornerRadius="25"
+                           BackgroundColor="#4d91c6">
+                        <Grid>
+                            <StackLayout BackgroundColor="#4d91c6">
+                                <Grid BackgroundColor="#4d91c6">
+                                    <Grid.ColumnDefinitions>
+                                        <ColumnDefinition Width="*" />
+                                        <ColumnDefinition Width="*" />
+                                    </Grid.ColumnDefinitions>
+                                    <StackLayout Grid.Column="0"
+                                                 HeightRequest="65"
+                                                 VerticalOptions="Start"
+                                                 HorizontalOptions="Start"
+                                                 Margin="35,0,0,0">
+                                        <StackLayout Grid.Column="1"
+                                                     HeightRequest="100"
+                                                     VerticalOptions="Start">
+                                            <Label Text="LUGAR"
+                                                   VerticalOptions="EndAndExpand"
+                                                   TextColor="DarkGray"
+                                                   FontAttributes="Bold" />
+                                        </StackLayout>
+                                        <StackLayout Grid.Row="1"
+                                                     Grid.Column="1"
+                                                     HeightRequest="100"
+                                                     VerticalOptions="Start">
+                                            <Label Text="{Binding parametrosRecibe.Lugar}"
+                                                   VerticalOptions="EndAndExpand"
+                                                   FontSize="21"
+                                                   TextColor="Black"
+                                                   FontAttributes="Bold" />
+                                        </StackLayout>
+                                    </StackLayout>
+                                    <StackLayout Grid.Column="1"
+                                                 HeightRequest="65"
+                                                 VerticalOptions="Start"
+                                                 HorizontalOptions="End"
+                                                 Margin="0,0,35,0">
+                                        <StackLayout Grid.Column="1"
+                                                     HeightRequest="100"
+                                                     VerticalOptions="Start">
+                                            <Label Text="FECHA"
+                                                   VerticalOptions="EndAndExpand"
+                                                   TextColor="DarkGray"
+                                                   FontAttributes="Bold" />
+                                        </StackLayout>
+                                        <StackLayout Grid.Row="1"
+                                                     Grid.Column="1"
+                                                     HeightRequest="100"
+                                                     VerticalOptions="Start">
+                                            <Label Text="{Binding parametrosRecibe.Fecha}"
+                                                   VerticalOptions="EndAndExpand"
+                                                   FontSize="21"
+                                                   TextColor="Black"
+                                                   FontAttributes="Bold" />
+                                        </StackLayout>
+                                    </StackLayout>
+                                </Grid>
+                                <StackLayout Margin="0,35,0,0">
+                                    <Label Text="{Binding parametrosRecibe.Texto}"
+                                           TextColor="Black"
+                                           FontSize="16" />
+                                </StackLayout>
+                            </StackLayout>
+                        </Grid>
+                    </Frame>
+                </Grid>
+            </StackLayout>
+        </Grid>
+    </ContentPage.Content>
+</ContentPage>
